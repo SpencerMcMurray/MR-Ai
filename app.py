@@ -6,8 +6,8 @@ from functions import read_counter
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 1024**3  # 1GB
 
-MODEL_PATH = "output/unet_model_for_decathlon.hdf5"
-OUTPUT_PATH = "inference_examples"
+MODEL_PATH = "single-node/output/unet_model_for_decathlon.hdf5"
+OUTPUT_PATH = "single-node/inference_examples"
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -24,5 +24,5 @@ def index():
     return render_template('index.html')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()

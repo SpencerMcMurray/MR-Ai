@@ -3,10 +3,9 @@ import keras as K
 import nibabel as nib
 import numpy as np
 import os
-import tensorflow as tf
-import SimpleITK as sitk
 import plot_inference_examples as plot
 import convert_raw_to_hdf5 as raw_To_hdf5
+
 
 def load_model_from_path(modelpath):
     """(str) -> Keras Model
