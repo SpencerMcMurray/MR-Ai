@@ -7,21 +7,28 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 1024**3  # 1GB
 
 MODEL_PATH = "single-node/output/unet_model_for_decathlon.hdf5"
-OUTPUT_PATH = "single-node/inference_examples"
+OUTPUT_PATH = "static/images/scans"
 
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/')
 def index():
-    if request.method == "POST":
-        img_path = request.files['img']
-        if img_path is None:
-            redirect(url_for('index'))
-        img_id = read_counter('id_counter')
-        run_img_thru_model(img_path, MODEL_PATH, OUTPUT_PATH, img_id)
-        brain = os.path.join(OUTPUT_PATH, "brain" + str(img_id) + ".png")
-        tumor = os.path.join(OUTPUT_PATH, "pred" + str(img_id) + ".png")
-        return render_template('scansDisplay.html', brain=brain, tumor=tumor)
     return render_template('index.html')
+
+
+@app.route('/scan', methods=["POST"])
+def scan():
+    img = request.files['img']
+    if img is None:
+        redirect(url_for('index'))
+    img_id = read_counter('id_counter')
+    img_path = os.path.join(OUTPUT_PATH, "temp" + str(img_id) + ".nii")
+    img.save(img_path)
+
+    run_img_thru_model(img_path, MODEL_PATH, OUTPUT_PATH, img_id)
+    brain = "brain" + str(img_id) + ".png"
+    tumor = "pred" + str(img_id) + ".png"
+    os.remove(img_path)
+    return render_template('scansDisplay.html', brain=brain, tumor=tumor)
 
 
 if __name__ == "__main__":

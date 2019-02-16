@@ -5,7 +5,7 @@
     <h2 id="upload-header" class="display-4">Upload MR</h2>
         <div class="pb-4">
             <div class="mx-auto mt-3 rounded py-4" style="width: 300px;border: 0.5px solid rgb(25, 25, 25);font-size: 20px;">
-                <form class="text-left d-flex flex-wrap justify-content-center align-items-center" method="POST" enctype="multipart/form-data">
+                <form action="{{ url_for('scan') }}" class="text-left d-flex flex-wrap justify-content-center align-items-center" method="POST" enctype="multipart/form-data">
                     <div class="form-group col-md-12 justify-content-center  p-4">
                         <label for="img" style="font-size: 20px">NifTI Format Required</label>
                         <input required id="img" type="file" accept="" name="img" class="form-control-file">
