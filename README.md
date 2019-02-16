@@ -1,4 +1,4 @@
-# HackXplore2019
+# Brain Tumor Detection
 
 This project was made during the HackXplore 2019 hackathon which was themed around AI and Healthcare
 
