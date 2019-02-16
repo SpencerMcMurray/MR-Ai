@@ -4,7 +4,7 @@ import nibabel as nib
 import numpy as np
 import os
 import tensorflow as tf
-import convert_raw_to_hdf5 as raw_To_hdf5
+import convert_raw_to_hdf5 as raw_to_hdf5
 
 
 def combined_dice_ce_loss(y_true, y_pred, axis=(1, 2), smooth=1.,
@@ -43,7 +43,7 @@ def dice_coef_loss(target, prediction, axis=(1, 2), smooth=1.):
     t = tf.reduce_sum(target, axis=axis)
     numerator = tf.reduce_mean(intersection + smooth)
     denominator = tf.reduce_mean(t + p + smooth)
-    dice_loss = tf.log(2. * numerator) + tf.log(denominator)
+    dice_loss = -tf.log(2. * numerator) + tf.log(denominator)
 
     return dice_loss
 
@@ -66,8 +66,8 @@ def load_img_from_path(imgpath):
     if len(img.shape) != 4:  # Make sure 4D
         img = np.expand_dims(img, -1)
 
-    img = raw_To_hdf5.crop_center(img, 144, 144, 4)
-    img = raw_To_hdf5.normalize_img(img)
+    img = raw_to_hdf5.crop_center(img, 144, 144, 4)
+    img = raw_to_hdf5.normalize_img(img)
 
     img = np.swapaxes(np.array(img), 0, -2)
 
