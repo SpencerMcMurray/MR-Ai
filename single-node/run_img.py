@@ -63,6 +63,3 @@ def run_img_thru_model(imgpath, modelpath, savepath, img_id):
 
     plt.clf()
     plt.close()
-	
-if __name__ == "__main__":
-    run_img_thru_model("BRATS_633.nii", "output/unet_model_for_decathlon.hdf5", "inference_examples", "73")

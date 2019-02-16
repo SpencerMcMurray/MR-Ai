@@ -6,14 +6,12 @@
         <div class="pb-4" style="margin-top:3%;">
             <div class="container d-flex justify-content-center align-items-center">
                 <div class="col-md-5 mx-auto border">
-                    {{ brain }}
-                    <label for="b">Original MR</label>
-                    <img id="b" alt="Brain Pic" src="https://www.itnonline.com/sites/itnonline/files/styles/content_large/public/Brain_Chronic_traumatic_injury_frontal_gliosis_from_ITN_webinar.png?itok=9mcdquae">
+                    <label for="brain">Original MR</label>
+                    <img id="brain" alt="Brain Pic" src="{{ tumor }}">
                 </div>
                 <div class="col-md-5 mx-auto border">
-                    {{ tumor }}
-                    <label for="t">MR with Tumor Detection</label>
-                    <img id="t" alt="Brain Pic" src="https://www.itnonline.com/sites/itnonline/files/styles/content_large/public/Brain_Chronic_traumatic_injury_frontal_gliosis_from_ITN_webinar.png?itok=9mcdquae">
+                    <label for="tumor">MR with Tumor Detection</label>
+                    <img id="tumor" alt="Tumor Pic" src="{{ brain }}">
                 </div>
             </div>
         </div>
