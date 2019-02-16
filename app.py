@@ -7,8 +7,8 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         # Run Script
-        brain = "Yeet"
-        tumor = "Yaah"
+        brain = ""
+        tumor = ""
         return render_template('scansDisplay.html', brain=brain, tumor=tumor)
     return render_template('index.html')
 
