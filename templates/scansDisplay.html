@@ -2,17 +2,17 @@
 {% block body %}
 <body>
     <div>
-        <div class="pb-4">
-            <h2 class="display-4 pb-4" id="upload-header">Upload MR</h2>
+    <h2 class="display-4" id="result-header">Results</h2>
+        <div class="pb-4" style="margin-top:3%;">
             <div class="container d-flex justify-content-center align-items-center">
                 <div class="col-md-5 mx-auto border">
                     {{ brain }}
-                    <label for="b">Brain Original</label>
+                    <label for="b">Original MR</label>
                     <img id="b" alt="Brain Pic" src="https://www.itnonline.com/sites/itnonline/files/styles/content_large/public/Brain_Chronic_traumatic_injury_frontal_gliosis_from_ITN_webinar.png?itok=9mcdquae">
                 </div>
                 <div class="col-md-5 mx-auto border">
                     {{ tumor }}
-                    <label for="t">Brain Original</label>
+                    <label for="t">MR with Tumor Detection</label>
                     <img id="t" alt="Brain Pic" src="https://www.itnonline.com/sites/itnonline/files/styles/content_large/public/Brain_Chronic_traumatic_injury_frontal_gliosis_from_ITN_webinar.png?itok=9mcdquae">
                 </div>
             </div>

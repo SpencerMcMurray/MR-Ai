@@ -1,19 +1,36 @@
 .navbar{
-    background-color: #36D7B7;
+    background-color:#1e90ff;
+    opacity: 0.8;
 }
 .navbar-brand{
-    color: #f0f8ff;
+    color:  #464949;
 }
 #upload-header{
-    margin-top: 10%;
+    margin-top: 8%;
 }
-img {
+#result-header{
+    margin-top: 5%;
+}
+#img {
     max-width: 100%;
     max-height: 100%;
 }
 #tensorflow{
-    height: auto; 
-    width: auto; 
+    float: right;
     max-width: 300px; 
     max-height: 300px;
+}
+.pb-4{
+    display: none;
+}
+#brain-icon{
+    max-width: 100px;
+    max-height: 100px;
+    float: right;
+}
+#foot{
+    display: inline-block;
+}
+#made-with{
+    float: right;
 }
