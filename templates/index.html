@@ -1,9 +1,20 @@
 {% extends "outline.html" %}
 {% block body %}
 <body>
-    <div class="container-fluid">
+    <div>
         <div class="jumbotron">
-            <h1 class="display-3">HackXplore 2019</h1>
+            <h1 class="display-3">Detect Your Brain Tumor Today</h1>
+        </div>
+        <div class="pb-4">
+            <h1 class="display-4 pb-4">Upload Brain Scan</h1>
+            <div class="mx-auto rounded py-4" style="width: 300px;background-color: rgb(245, 245, 245);border: 1px solid rgb(25, 25, 25);font-size: 20px;">
+                <form class="text-left d-flex flex-wrap justify-content-center align-items-center" method="POST" enctype="multipart/form-data">
+                    <div class="form-group p-4">
+                        <label for="img">Upload Scan</label>
+                        <input id="img" type="file" accept="" name="img" class="form-control-file">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>
