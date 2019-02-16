@@ -1,10 +1,9 @@
 # Brain Tumor Detection
 
-This project was made during the HackXplore 2019 hackathon which was themed around AI and Healthcare
+A web-app which takes in a .nii file(standard for brain scans) and creates an image highlighting any tumors detected in the scan and displays it.
 
 ## Authors
 
 * *Spencer McMurray*
 * *Jayesh Khullar*
 * *Salim Anvarov*
-* *George Huang*
