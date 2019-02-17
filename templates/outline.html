@@ -14,23 +14,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="static/js/main.js"></script>
 
+        <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/chipset-and-electronic/500/chipset-chip-microchip-digital_16-512.png">
 
         <meta charset='UTF-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>HackXplore</title>
+        <title>MR-AI</title>
     </head>
+    <body>
     <header class="text-center">
         <nav class="navbar fixed-top navbar-expand-md">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url_for('index') }}"><h1>Brain Tumor Detection</h1></a>
+                    <a class="navbar-brand" href="{{ url_for('index') }}"><h1>MR-Ai</h1></a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div>
                     <ul class="nav-item mr-auto">
-                        <image id="brain-icon" src="https://cdn3.iconfinder.com/data/icons/chipset-and-electronic/500/chipset-chip-microchip-digital_16-512.png">
+                        <img id="brain-icon" src="https://cdn3.iconfinder.com/data/icons/chipset-and-electronic/500/chipset-chip-microchip-digital_16-512.png" alt="logo"/>
                     </ul>
                 </div>
             </div>
@@ -46,8 +48,7 @@
         <div class="ml-auto" style="float: left;">
             <h3>HackXplore 2019: Team 10</h3>
         </div>
-        <h3 id="made-with">Made With:</h3>
     </div>
-    <image id="tensorflow" src="\static\images\tensor.jpg">
+    <img id="tensorflow" src="static\images\tensor.jpg" alt="tensorflow + python"/>
     </footer>
 </html>
