@@ -20,12 +20,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MR-AI</title>
     </head>
-    <body>
+    <body background="https://hdqwalls.com/wallpapers/abstract-dust-particles-hd.jpg">
     <header class="text-center">
         <nav class="navbar fixed-top navbar-expand-md">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url_for('index') }}"><h1>MR-Ai</h1></a>
+                    <a class="navbar-brand" href="{{ url_for('index') }}"><h1 style="color:white;">MR-Ai</h1></a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -42,13 +42,4 @@
         {% block body %}
         {% endblock body %}
     </main>
-    <footer style="margin-top:5%;">
-    <hr style="width: 80%">
-    <div class="container" id="foot">
-        <div class="ml-auto" style="float: left;">
-            <h3>HackXplore 2019: Team 10</h3>
-        </div>
-    </div>
-    <img id="tensorflow" src="static\images\tensor.jpg" alt="tensorflow + python"/>
-    </footer>
 </html>

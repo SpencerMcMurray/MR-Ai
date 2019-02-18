@@ -2,15 +2,15 @@
 {% block body %}
 <body>
     <div>
-    <h2 class="display-4" id="result-header">Results</h2>
+    <h2 class="display-4" id="result-header" style="color: white">Results</h2>
         <div class="pb-4" style="margin-top:3%;">
             <div class="container d-flex justify-content-center align-items-center">
                 <div class="col-md-5 mx-auto border">
-                    <label for="brain">Original MR</label>
+                    <label for="brain" style="color: white">Original MR</label>
                     <img width="350" height="350" id="brain" alt="Brain Pic" src="{{ url_for('static', filename=('images/scans/' + brain)) }}">
                 </div>
                 <div class="col-md-5 mx-auto border">
-                    <label for="tumor">MR with Tumor Detection</label>
+                    <label for="tumor" style="color: white">MR with Tumor Detection</label>
                     <img width="350" height="350" id="tumor" alt="Tumor Pic" src="{{ url_for('static', filename=('images/scans/' + tumor)) }}">
                 </div>
             </div>
